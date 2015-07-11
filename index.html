@@ -31,22 +31,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <script>
-    $(document).ready(function() {
-            $('body').fadeIn(2000);
-        });
-    </script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.backstretch.min.js"></script>
-    <script src="js/bootstrap-switch.min.js"></script>
-
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -66,7 +50,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="changeBackground()">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -307,17 +291,71 @@
         <p>This independent TEDx event is operated under license from TED. This TEDx event is independently organized.</p>
     </footer>
 
-    <!-- My JavaScript -->
-    <script type="text/javascript">
-    (function(){
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script>
+    $(document).ready(function() {
+            $('body').fadeIn(2000);
 
-        // try {
-        //     BackStretch();
+            $('#header').backstretch("img/fire.jpg");
+
+    });
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/bootstrap-switch.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- <script src="js/lodash.js"></script> -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+
+     <!-- My JavaScript -->
+    <script type="text/javascript">
+
+        // var  i = 0;
+
+        // var img = new Array("stellarsky.jpg", "blossom.jpg", "fire.jpg", "bridge.jpg", "mountain.jpg");
+
+        // function changeBackground() {
+
+        //     $('header').fadeTo('slow', 0, function(){
+
+        //         $(this).css({
+        //             background: 'url(./img/' + img[i] + ')' + 'no-repeat center',
+        //             backgroundSize: 'cover'
+        //         });
+
+        //     }).fadeTo('slow', 1);
+
+
+        //     i++;
+
+        //     if(i >= img.length){
+        //         i = 0;
+        //     }
         // }
-        // catch (e){
-        //     $('#header').css('background-image', 'url(../img/fire.jpg)');
-        //     console.log(e);
-        // }
+
+
+        // setInterval("changeBackground()", 5000);
+
+        function changeBackground() {
+                $('#header').backstretch(
+                    ["img/fire.jpg",
+                     "img/blossom.jpg",
+                     "img/stellarsky.jpg",
+                     "img/bridge.jpg",
+                     "img/mountain.jpg"],
+                     {duration: 2000, fade: 4000}
+                );
+            }
 
          var options =  {
             size: "large",
@@ -339,28 +377,9 @@
                 }
         });
 
-        function BackStretch() {
 
-            $('#header').backstretch(
-                ["img/stellarsky.jpg",
-                 "img/blossom.jpg",
-                 "img/fire.jpg",
-                 "img/bridge.jpg",
-                 "img/mountain.jpg"],
-                 {duration: 2000, fade: 4000}
-            );
-        }
-    }());
     </script>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/lodash.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
 
 </body>
 
