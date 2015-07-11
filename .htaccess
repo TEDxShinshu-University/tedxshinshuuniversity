@@ -1,3 +1,6 @@
-<Files ~ ".(gif|jpe?g|png|ico)$">
-	Header set Cache-Control "max-age=2592000, public"
-</Files>
+ExpiresActive On
+ExpiresByType text/css "access plus 1days"
+ExpiresByType text/jpeg "access plus 30days"
+ExpiresByType text/jpg "access plus 30days"
+ExpiresByType text/png "access plus 30days"
+ExpiresByType application/x-javascript "access plus 30days"
