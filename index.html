@@ -34,6 +34,11 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script>
+    $(document).ready(function() {
+            $('body').fadeIn(2000);
+        });
+    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.js"></script>
@@ -303,14 +308,16 @@
     </footer>
 
     <!-- My JavaScript -->
-    <script async type="text/javascript">
-        try {
-            BackStretch();
-        }
-        catch (e){
-            $('#header').css('background-image', 'url(../img/fire.jpg)');
-            console.log(e);
-        }
+    <script type="text/javascript">
+    (function(){
+
+        // try {
+        //     BackStretch();
+        // }
+        // catch (e){
+        //     $('#header').css('background-image', 'url(../img/fire.jpg)');
+        //     console.log(e);
+        // }
 
          var options =  {
             size: "large",
@@ -343,6 +350,7 @@
                  {duration: 2000, fade: 4000}
             );
         }
+    }());
     </script>
 
     <!-- Plugin JavaScript -->
