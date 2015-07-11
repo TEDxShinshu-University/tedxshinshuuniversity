@@ -311,14 +311,7 @@
     <script type="text/javascript">
     $(window).load(function() {
 
-        $('#header').backstretch(
-            ["img/fire.jpg",
-             "img/紅桜.jpg",
-             "img/銀河.jpg",
-             "img/橋.jpg",
-             "img/山景色.jpg"],
-             {duration: 2000, fade: 4000}
-        );
+        BackStretch();
 
          var options =  {
             size: "large",
@@ -339,6 +332,18 @@
                     $('.jp').hide();
                 }
         });
+
+        function BackStretch() {
+
+            $('#header').backstretch(
+                ["img/銀河.jpg",
+                 "img/紅桜.jpg",
+                 "img/fire.jpg",
+                 "img/橋.jpg",
+                 "img/山景色.jpg"],
+                 {duration: 2000, fade: 4000}
+            );
+        }
 
    });
 
